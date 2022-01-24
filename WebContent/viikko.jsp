@@ -247,7 +247,22 @@
 		</tr>
 		<tr>
 			<td>12:00-12:45</td>
-			<td></td>
+			<td>
+			
+			<%
+			if(maanantainVaraukset.size() > 0) {
+				for(int i=0; i < maanantainVaraukset.size(); i++) {
+					if((maanantainVaraukset.get(i).getAloitusAika().equals("12:00") && 
+							maanantainVaraukset.get(i).getLopetusAika().equals("12:45"))) {
+							out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>");
+					}
+	
+				}
+			}
+			
+			%>	
+			
+			</td>
 			<td></td>
 			<td>
 			<%
