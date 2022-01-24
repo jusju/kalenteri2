@@ -31,7 +31,7 @@ public class HitsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		Scanner lukija = new Scanner(new File("/opt/hits.txt"));
+		Scanner lukija = new Scanner(new File("/tmp/hits.txt"));
 		
 		String stringLuku = "";
 		while(lukija.hasNext()) {
@@ -49,7 +49,7 @@ public class HitsServlet extends HttpServlet {
 		luku = luku + 1;
 
 		try {
-			PrintWriter ulosKirjoitus = new PrintWriter("/opt/hits.txt");
+			PrintWriter ulosKirjoitus = new PrintWriter("/tmp/hits.txt");
 			ulosKirjoitus.println(luku);
 			ulosKirjoitus.close();
 		} catch(IOException ex) {
