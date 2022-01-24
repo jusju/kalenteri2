@@ -49,7 +49,7 @@ public class HitsServlet extends HttpServlet {
 		luku = luku + 1;
 
 		try {
-			PrintWriter ulosKirjoitus = new PrintWriter("C:/TEMP/hits.txt");
+			PrintWriter ulosKirjoitus = new PrintWriter("/opt/hits.txt");
 			ulosKirjoitus.println(luku);
 			ulosKirjoitus.close();
 		} catch(IOException ex) {
