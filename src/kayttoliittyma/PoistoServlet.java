@@ -36,13 +36,9 @@ public class PoistoServlet extends HttpServlet {
 		ViikonpaivaDAO dao = new ViikonpaivaDAO();
 
 		String id = request.getParameter("id");
-		
-
-
 		System.out.println(id);
 
-
-		dao.talletaAikavaraus(aikavaraus);
+		dao.poistaAikavaraus(id);
 
 		
 		RequestDispatcher disp = request.getRequestDispatcher("viikko.jsp?kenenkalenteri=Jukka");

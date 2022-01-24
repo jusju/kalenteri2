@@ -40,7 +40,7 @@
 				for(int i=0; i < maanantainVaraukset.size(); i++) {
 					if(maanantainVaraukset.get(i).getAloitusAika().equals(("8:00"))) {
 						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b> " + 
-						"<a href=\"/jukka\">POISTA</a>");
+						"<a href=\"/PoistoServlet?id=" + maanantainVaraukset.get(i).getId() + "\">POISTA</a>");
 					}
 				}
 			}
