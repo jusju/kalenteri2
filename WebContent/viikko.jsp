@@ -52,7 +52,8 @@
 			if(tiistainVaraukset.size() > 0) {
 				for(int i=0; i < tiistainVaraukset.size(); i++) {
 					if(tiistainVaraukset.get(i).getAloitusAika().equals(("8:00"))) {
-						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + tiistainVaraukset.get(i).getId() + "\">POISTA</a>");
 					}
 				}
 			}
@@ -65,7 +66,8 @@
 			if(keskiviikonVaraukset.size() > 0) {
 				for(int i=0; i < keskiviikonVaraukset.size(); i++) {
 					if(keskiviikonVaraukset.get(i).getAloitusAika().equals(("8:00"))) {
-						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + keskiviikonVaraukset.get(i).getId() + "\">POISTA</a>");
 					}
 				}
 			}
@@ -78,7 +80,8 @@
 			if(torstainVaraukset.size() > 0) {
 				for(int i=0; i < torstainVaraukset.size(); i++) {
 					if(torstainVaraukset.get(i).getAloitusAika().equals(("8:00"))) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");
 					}
 				}
 			}
@@ -96,7 +99,8 @@
 					if((maanantainVaraukset.get(i).getAloitusAika().equals("8:00") || 
 							maanantainVaraukset.get(i).getAloitusAika().equals("9:00")) && 
 									maanantainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + maanantainVaraukset.get(i).getId() + "\">POISTA</a>");		
 					}
 	
 				}
@@ -113,7 +117,8 @@
 					if((tiistainVaraukset.get(i).getAloitusAika().equals("8:00") || 
 							tiistainVaraukset.get(i).getAloitusAika().equals("9:00")) && 
 							tiistainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + tiistainVaraukset.get(i).getId() + "\">POISTA</a>");	
 					}
 	
 				}
@@ -132,7 +137,8 @@
 					if((keskiviikonVaraukset.get(i).getAloitusAika().equals("8:00") || 
 							keskiviikonVaraukset.get(i).getAloitusAika().equals("9:00")) && 
 							keskiviikonVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + keskiviikonVaraukset.get(i).getId() + "\">POISTA</a>");							
 					}
 	
 				}
@@ -151,7 +157,8 @@
 					if((torstainVaraukset.get(i).getAloitusAika().equals("8:00") || 
 							torstainVaraukset.get(i).getAloitusAika().equals("9:00")) && 
 							torstainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");	
 					}
 	
 				}
@@ -172,7 +179,8 @@
 							maanantainVaraukset.get(i).getAloitusAika().equals("9:00") ||
 							maanantainVaraukset.get(i).getAloitusAika().equals("10:00")) && 
 									maanantainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b> " +
+								"<a href=\"/PoistoServlet?id=" + maanantainVaraukset.get(i).getId() + "\">POISTA</a>");			
 					}
 	
 				}
@@ -189,7 +197,8 @@
 							tiistainVaraukset.get(i).getAloitusAika().equals("9:00") ||
 							tiistainVaraukset.get(i).getAloitusAika().equals("10:00")) && 
 							tiistainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + tiistainVaraukset.get(i).getAihe() + " @" + tiistainVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + tiistainVaraukset.get(i).getId() + "\">POISTA</a>");	
 					}
 	
 				}
@@ -207,7 +216,8 @@
 							keskiviikonVaraukset.get(i).getAloitusAika().equals("9:00") ||
 							keskiviikonVaraukset.get(i).getAloitusAika().equals("10:00")) && 
 							keskiviikonVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + keskiviikonVaraukset.get(i).getId() + "\">POISTA</a>");	
 					}
 	
 				}
@@ -226,7 +236,8 @@
 							torstainVaraukset.get(i).getAloitusAika().equals("9:00") ||
 							torstainVaraukset.get(i).getAloitusAika().equals("10:00")) && 
 							torstainVaraukset.get(i).getLopetusAika().equals("10:45")) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");							
 					}
 	
 				}
@@ -255,7 +266,8 @@
 				for(int i=0; i < maanantainVaraukset.size(); i++) {
 					if((maanantainVaraukset.get(i).getAloitusAika().equals("12:00") && 
 							maanantainVaraukset.get(i).getLopetusAika().equals("12:45"))) {
-							out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>");
+							out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>" +
+									"<a href=\"/PoistoServlet?id=" + maanantainVaraukset.get(i).getId() + "\">POISTA</a>");								
 					}
 	
 				}
@@ -271,7 +283,8 @@
 				for(int i=0; i < keskiviikonVaraukset.size(); i++) {
 					if((keskiviikonVaraukset.get(i).getAloitusAika().equals("12:00") && 
 							keskiviikonVaraukset.get(i).getLopetusAika().equals("13:45"))) {
-							out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>");
+							out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>" +
+									"<a href=\"/PoistoServlet?id=" + keskiviikonVaraukset.get(i).getId() + "\">POISTA</a>");		
 					}
 	
 				}
@@ -287,7 +300,8 @@
 				for(int i=0; i < torstainVaraukset.size(); i++) {
 					if((torstainVaraukset.get(i).getAloitusAika().equals("12:00")  && 
 							torstainVaraukset.get(i).getLopetusAika().equals("14:45"))) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");		
 					}
 	
 				}
@@ -307,7 +321,8 @@
 				for(int i=0; i < keskiviikonVaraukset.size(); i++) {
 					if((keskiviikonVaraukset.get(i).getAloitusAika().equals("12:00") && 
 							keskiviikonVaraukset.get(i).getLopetusAika().equals("13:45"))) {
-							out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>");
+							out.println("<b>" + keskiviikonVaraukset.get(i).getAihe() + " @" + keskiviikonVaraukset.get(i).getSijainti() + "</b>" +
+									"<a href=\"/PoistoServlet?id=" + keskiviikonVaraukset.get(i).getId() + "\">POISTA</a>");		
 					}
 	
 				}
@@ -323,7 +338,8 @@
 				for(int i=0; i < torstainVaraukset.size(); i++) {
 					if((torstainVaraukset.get(i).getAloitusAika().equals("12:00")  && 
 							torstainVaraukset.get(i).getLopetusAika().equals("14:45"))) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");
 					}
 	
 				}
@@ -345,7 +361,8 @@
 				for(int i=0; i < torstainVaraukset.size(); i++) {
 					if((torstainVaraukset.get(i).getAloitusAika().equals("12:00")  && 
 							torstainVaraukset.get(i).getLopetusAika().equals("14:45"))) {
-						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + torstainVaraukset.get(i).getAihe() + " @" + torstainVaraukset.get(i).getSijainti() + "</b>" +
+								"<a href=\"/PoistoServlet?id=" + torstainVaraukset.get(i).getId() + "\">POISTA</a>");	
 					}
 	
 				}
@@ -417,5 +434,7 @@
 
 		
 		</table>
+<a href="lisaatapahtuma.jsp">Lis‰‰ tapahtuma</a>		
+		
 </body>
 </html>
