@@ -31,7 +31,7 @@ public class HitsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		Scanner lukija = new Scanner(new File("C:/TEMP/hits.txt"));
+		Scanner lukija = new Scanner(new File("/opt/hits.txt"));
 		
 		String stringLuku = "";
 		while(lukija.hasNext()) {
