@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.ViikonpaivaDAO;
+import kohdeluokat.Aikavaraus;
 
 /**
  * Servlet implementation class LisaysServlet
@@ -34,6 +35,9 @@ public class LisaysServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("JUKKAHELLO");
 		ViikonpaivaDAO dao = new ViikonpaivaDAO();
+
+		String viikonpaiva = request.getParameter("viikonpaiva");
+		
 		String aloitusaika = request.getParameter("aloitusaika");
 
 		String lopetusaika = request.getParameter("lopetusaika");
@@ -42,10 +46,13 @@ public class LisaysServlet extends HttpServlet {
 
 		String kayttaja = request.getParameter("kayttaja");
 
+		System.out.println(viikonpaiva);
 		System.out.println(aloitusaika);
 		System.out.println(lopetusaika);
 		System.out.println(sijainti);
 		System.out.println(kayttaja);
+		Aikavaraus aikavaraus = new Aikavaraus(viikonpaiva, aloitusAika, lopetusAika, kayttaja, aihe, sijainti)
+		dao.talletaAikavaraus(aikavaraus);
 
 		RequestDispatcher disp = request.getRequestDispatcher("viikko.jsp?kenenkalenteri=Jukka");
 

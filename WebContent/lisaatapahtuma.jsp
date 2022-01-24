@@ -15,6 +15,12 @@
 
 <table>
 <input type="hidden" name="kayttaja" value="Jukka">
+
+<tr>
+<td>Viikonpäivä</td>
+<td><input type="text" name="viikonpaiva" length="10"></td>
+</tr>
+
 <tr>
 <td>Aloitusaika</td>
 <td><input type="text" name="aloitusaika" length="10"></td>
