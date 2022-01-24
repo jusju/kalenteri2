@@ -39,7 +39,7 @@ public class Kontrolleri extends HttpServlet {
 				System.out.println("SE KIRJAUTU");
 				if(request.getParameter("kayttajatunnus").equals("jusju")   &&
 					request.getParameter("salasana").equals("salasana")) {
-					RequestDispatcher disp = request.getRequestDispatcher("kalenterit.jsp");
+					RequestDispatcher disp = request.getRequestDispatcher("viikko.jsp?kenenkalenteri=Jukka");
 					disp.forward(request, response);
 				}
 					
