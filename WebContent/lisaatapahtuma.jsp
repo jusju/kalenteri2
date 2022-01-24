@@ -26,8 +26,13 @@
 </tr>
 
 <tr>
-<td>Aihe ja paikka (esim. O2 @ 5009)</td>
-<td><input type="text" name="aihe_ja_paikka" length="10"></td>
+<td>Aihe (Esim. O2)</td>
+<td><input type="text" name="aihe" length="10"></td>
+</tr>
+
+<tr>
+<td>Sijainti</td>
+<td><input type="text" name="sijainti" length="10"></td>
 </tr>
 
 <tr>
