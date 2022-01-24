@@ -26,8 +26,12 @@ public class LisaysServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("JUKKAHELLO");
+		String aloitusaika = request.getParameter("aloitusaika");
+		String lopetusaika = request.getParameter("lopetusaika");
+		String aikaJaPaikka = request.getParameter("aika_ja_paikka");
+		
+		
 	}
 
 	/**
