@@ -39,7 +39,8 @@
 			if(maanantainVaraukset.size() > 0) {
 				for(int i=0; i < maanantainVaraukset.size(); i++) {
 					if(maanantainVaraukset.get(i).getAloitusAika().equals(("8:00"))) {
-						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b>");
+						out.println("<b>" + maanantainVaraukset.get(i).getAihe() + " @" + maanantainVaraukset.get(i).getSijainti() + "</b> " + 
+						"<a href=\"/jukka\">POISTA</a>");
 					}
 				}
 			}

@@ -17,6 +17,17 @@ public class ViikonpaivaDAO {
 	}
 	
 	
+	public void poistaAikavaraus(String id) {
+		Yhteys yhteys = new Yhteys();
+		Paivitys paivitys = new Paivitys(yhteys.getYhteys());
+
+		String sqlLause = 
+				"DELETE FROM Aikavaraus WHERE id='" + id  +"')";
+		System.out.println("JUKKA" + sqlLause);
+		paivitys.suoritaSqlLause(sqlLause);
+		yhteys.katkaise();
+	}
+	
 	public void talletaAikavaraus(Aikavaraus aikavaraus) {
 		Yhteys yhteys = new Yhteys();
 		Paivitys paivitys = new Paivitys(yhteys.getYhteys());
@@ -30,8 +41,6 @@ public class ViikonpaivaDAO {
 		paivitys.suoritaSqlLause(sqlLause);
 		yhteys.katkaise();
 	}
-	
-	
 
 	
 	public ArrayList<Aikavaraus> haeMaanantainAikavaraukset(String nimi) {
