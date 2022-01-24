@@ -24,11 +24,11 @@ public class ViikonpaivaDAO {
 		String sqlLause = 
 "INSERT INTO Aikavaraus(kayttaja, aloitus_aika, lopetus_aika, aihe, sijainti)"
 + " VALUES('" + aikavaraus.getKayttaja() + "', '" + aikavaraus.getAloitusAika() +
-"', " + aikavaraus.getLopetusAika() + "', '" + aikavaraus.getAihe() +
-"', " + aikavaraus.getSijainti();
+"', '" + aikavaraus.getLopetusAika() + "', '" + aikavaraus.getAihe() +
+"', '" + aikavaraus.getSijainti() + "');";
 		System.out.println("JUKKA" + sqlLause);
 		paivitys.suoritaSqlLause(sqlLause);
-	
+		yhteys.katkaise();
 	}
 	
 	
