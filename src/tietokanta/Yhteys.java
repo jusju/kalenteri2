@@ -35,7 +35,7 @@ public class Yhteys {
 
         try {
             // Otetaan yhteys tietokantaan
-            yhteys = DriverManager.getConnection(URL);
+            yhteys = DriverManager.getConnection(URL, "jusju", "password");
                 
             
         } catch (SQLException ex) {
