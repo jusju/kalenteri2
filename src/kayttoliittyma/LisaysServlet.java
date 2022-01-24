@@ -34,13 +34,13 @@ public class LisaysServlet extends HttpServlet {
 		
 		String lopetusaika = request.getParameter("lopetusaika");
 		
-		String aikaJaPaikka = request.getParameter("aihe_ja_paikka");
+		String sijainti = request.getParameter("sijainti");
 
 		String kayttaja = request.getParameter("kayttaja");
 		
 		System.out.println(aloitusaika);
 		System.out.println(lopetusaika);
-		System.out.println(aikaJaPaikka);
+		System.out.println(sijainti);
 		System.out.println(kayttaja);
 		
 	}
