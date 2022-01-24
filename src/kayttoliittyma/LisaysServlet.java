@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ViikonpaivaDAO;
+
 /**
  * Servlet implementation class LisaysServlet
  */
@@ -27,10 +29,19 @@ public class LisaysServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("JUKKAHELLO");
+		ViikonpaivaDAO dao = new ViikonpaivaDAO();
 		String aloitusaika = request.getParameter("aloitusaika");
-		String lopetusaika = request.getParameter("lopetusaika");
-		String aikaJaPaikka = request.getParameter("aika_ja_paikka");
 		
+		String lopetusaika = request.getParameter("lopetusaika");
+		
+		String aikaJaPaikka = request.getParameter("aihe_ja_paikka");
+
+		String kayttaja = request.getParameter("kayttaja");
+		
+		System.out.println(aloitusaika);
+		System.out.println(lopetusaika);
+		System.out.println(aikaJaPaikka);
+		System.out.println(kayttaja);
 		
 	}
 

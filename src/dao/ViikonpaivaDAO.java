@@ -6,6 +6,7 @@ import java.util.Iterator;
 
 import kohdeluokat.Aikavaraus;
 import tietokanta.Kysely;
+import tietokanta.Paivitys;
 import tietokanta.Yhteys;
 
 public class ViikonpaivaDAO {
@@ -14,6 +15,22 @@ public class ViikonpaivaDAO {
 		//System.out.println(dao.haeAikaVaraukset());
 		
 	}
+	
+	
+	public void talletaAikavaraus(Aikavaraus aikavaraus) {
+		Yhteys yhteys = new Yhteys();
+		Paivitys paivitys = new Paivitys(yhteys.getYhteys());
+
+		String sqlLause = 
+"INSERT INTO Aikavaraus(kayttaja, aloitus_aika, lopetus_aika, aihe, sijainti)"
++ " VALUES('" + aikavaraus.getKayttaja() + "', '" + aikavaraus.getAloitusAika() +
+"', " + aikavaraus.getLopetusAika() + "', '" + aikavaraus.getAihe() +
+"', " + aikavaraus.getSijainti();
+		System.out.println("JUKKA" + sqlLause);
+		paivitys.suoritaSqlLause(sqlLause);
+	
+	}
+	
 	
 
 	

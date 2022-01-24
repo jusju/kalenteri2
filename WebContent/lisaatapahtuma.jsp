@@ -14,6 +14,7 @@
 <form action="LisaysServlet" method="get">
 
 <table>
+<input type="hidden" name="kayttaja" value="Jukka">
 <tr>
 <td>Aloitusaika</td>
 <td><input type="text" name="aloitusaika" length="10"></td>
