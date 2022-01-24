@@ -44,6 +44,8 @@ public class LisaysServlet extends HttpServlet {
 
 		String sijainti = request.getParameter("sijainti");
 
+		String aihe = request.getParameter("aihe");
+		
 		String kayttaja = request.getParameter("kayttaja");
 
 		System.out.println(viikonpaiva);
@@ -51,9 +53,10 @@ public class LisaysServlet extends HttpServlet {
 		System.out.println(lopetusaika);
 		System.out.println(sijainti);
 		System.out.println(kayttaja);
-		Aikavaraus aikavaraus = new Aikavaraus(viikonpaiva, aloitusAika, lopetusAika, kayttaja, aihe, sijainti)
+		Aikavaraus aikavaraus = new Aikavaraus(viikonpaiva, aloitusaika, lopetusaika, kayttaja, aihe, sijainti);
 		dao.talletaAikavaraus(aikavaraus);
 
+		
 		RequestDispatcher disp = request.getRequestDispatcher("viikko.jsp?kenenkalenteri=Jukka");
 
 		disp.forward(request, response);

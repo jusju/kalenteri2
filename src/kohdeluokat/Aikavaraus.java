@@ -18,10 +18,10 @@ public class Aikavaraus {
 
 
 
-	public Aikavaraus(int id, String viikonpaiva, String aloitusAika, String lopetusAika, String kayttaja, String aihe,
+	public Aikavaraus(String viikonpaiva, String aloitusAika, String lopetusAika, String kayttaja, String aihe,
 			String sijainti) {
 		super();
-		this.id = id;
+
 		this.viikonpaiva = viikonpaiva;
 		this.aloitusAika = aloitusAika;
 		this.lopetusAika = lopetusAika;
