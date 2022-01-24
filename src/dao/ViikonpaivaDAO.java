@@ -22,7 +22,7 @@ public class ViikonpaivaDAO {
 		Paivitys paivitys = new Paivitys(yhteys.getYhteys());
 
 		String sqlLause = 
-				"DELETE FROM Aikavaraus WHERE id='" + id  +"')";
+				"DELETE FROM Aikavaraus WHERE id='" + id  +"';";
 		System.out.println("JUKKA" + sqlLause);
 		paivitys.suoritaSqlLause(sqlLause);
 		yhteys.katkaise();
