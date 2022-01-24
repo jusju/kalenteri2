@@ -22,8 +22,8 @@ public class ViikonpaivaDAO {
 		Paivitys paivitys = new Paivitys(yhteys.getYhteys());
 
 		String sqlLause = 
-"INSERT INTO Aikavaraus(kayttaja, aloitus_aika, lopetus_aika, aihe, sijainti)"
-+ " VALUES('" + aikavaraus.getKayttaja() + "', '" + aikavaraus.getAloitusAika() +
+"INSERT INTO Aikavaraus(viikonpaiva, kayttaja, aloitus_aika, lopetus_aika, aihe, sijainti)"
++ " VALUES('" + aikavaraus.getViikonpaiva() + "', '" + aikavaraus.getKayttaja() + "', '" + aikavaraus.getAloitusAika() +
 "', '" + aikavaraus.getLopetusAika() + "', '" + aikavaraus.getAihe() +
 "', '" + aikavaraus.getSijainti() + "');";
 		System.out.println("JUKKA" + sqlLause);
