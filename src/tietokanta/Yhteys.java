@@ -21,10 +21,13 @@ public class Yhteys {
      * Ottaa yhteyden tietokantaan.
      */
     public void yhdista() {
-		String URL = "jdbc:sqlite:/opt/lukujarjestys.db";
-
+    	// VANHA MUOTO SQLITELLE
+		//String URL = "jdbc:sqlite:/opt/lukujarjestys.db";
+		String URL = "jdbc:mysql://localhost:3306/test";
+		
         try {
-    		Class.forName("org.sqlite.JDBC");
+    		//Class.forName("org.sqlite.JDBC");
+    		Class.forName("com.mysql.jdbc.Driver");        	
         } catch (java.lang.ClassNotFoundException ex) {
             System.out.print("ClassNotFoundException: ");
             System.out.println(ex.getMessage());
