@@ -23,7 +23,7 @@ public class Yhteys {
     public void yhdista() {
     	// VANHA MUOTO SQLITELLE
 		//String URL = "jdbc:sqlite:/opt/lukujarjestys.db";
-		String URL = "jdbc:mysql://localhost:3306/test";
+		String URL = "jdbc:mysql://localhost:3306/jusju";
 		
         try {
     		//Class.forName("org.sqlite.JDBC");
